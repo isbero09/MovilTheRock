@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crearCategoria"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:baselineAligned="false"
+        android:text="CREAR VENTA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"/>
+
+    <!-- Cliente -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_cliente_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Vendedor -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vendedor:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_vendedor_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Producto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producto"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_producto_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Precio -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_precio_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Fecha Venta -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Venta"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_fecha_venta_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:layout_marginBottom="20dp" />
+
+    <!-- ¿Está pagado? -->
+    <CheckBox
+        android:id="@+id/venta_pagado_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="¿Pagado?"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Fecha de Pago -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Pago"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/venta_fecha_pago_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_add_venta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+</LinearLayout>

@@ -20,7 +20,7 @@ class listaCategoria : Fragment() {
         val rv_lista_categorias =view.findViewById<RecyclerView>(R.id.rv_lista_categorias)
 
         view.findViewById<Button>(R.id.btn_nueva_categoria).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_to_listaCategoria);
+            findNavController().navigate(R.id.action_listaCategoria_to_crearCategoria);
         }
 
         return view

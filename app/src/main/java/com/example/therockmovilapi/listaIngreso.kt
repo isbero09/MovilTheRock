@@ -20,7 +20,7 @@ class listaIngreso : Fragment() {
         val rv_lista_ingresos = view.findViewById<RecyclerView>(R.id.rv_lista_ingreso)
 
         view.findViewById<Button>(R.id.btn_nuevo_ingreso).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_to_listaIngreso)
+            findNavController().navigate(R.id.action_listaIngreso_to_crearIngreso);
         }
 
         return view

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crearIngreso"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="REGISTRAR INGRESO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red" />
+
+    <!-- Cédula -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cédula"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ingreso_cedula_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Fecha -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha (YYYY-MM-DD)"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ingreso_fecha_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Detalles -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ingreso_detalles_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_add_ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Ingreso" />
+
+</LinearLayout>

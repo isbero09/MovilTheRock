@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crearUsuario"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:baselineAligned="false"
+        android:text="CREAR USUARIO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"/>
+
+        <!-- Cédula -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cédula"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_cedula_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:inputType="number" />
+
+        <!-- Nombres -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombres"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_nombre_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Apellidos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_apellido_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_email_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:inputType="textEmailAddress" />
+
+        <!-- Teléfono -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_telefono_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:inputType="phone" />
+
+        <!-- Estado -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_estado_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Ej: activo / inactivo" />
+
+        <!-- Fecha de Nacimiento -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Nacimiento"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/usuario_fecha_nacimiento_nuevo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="YYYY-MM-DD" />
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btn_add_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar Usuario" />
+
+</LinearLayout>

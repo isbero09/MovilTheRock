@@ -49,40 +49,144 @@
         android:id="@+id/listaCategoria"
         android:name="com.example.therockmovilapi.listaCategoria"
         android:label="fragment_lista_categoria"
-        tools:layout="@layout/fragment_lista_categoria" />
+        tools:layout="@layout/fragment_lista_categoria" >
+        <action
+            android:id="@+id/action_listaCategoria_to_crearCategoria"
+            app:destination="@id/crearCategoria" />
+    </fragment>
     <fragment
         android:id="@+id/listaDetalleIngreso"
         android:name="com.example.therockmovilapi.listaDetalleIngreso"
         android:label="fragment_lista_detalle_ingreso"
-        tools:layout="@layout/fragment_lista_detalle_ingreso" />
+        tools:layout="@layout/fragment_lista_detalle_ingreso" >
+        <action
+            android:id="@+id/action_listaDetalleIngreso_to_crearDetalleingreso"
+            app:destination="@id/crearDetalleingreso" />
+    </fragment>
     <fragment
         android:id="@+id/listaIngreso"
         android:name="com.example.therockmovilapi.listaIngreso"
         android:label="fragment_lista_ingreso"
-        tools:layout="@layout/fragment_lista_ingreso" />
+        tools:layout="@layout/fragment_lista_ingreso" >
+        <action
+            android:id="@+id/action_listaIngreso_to_crearIngreso"
+            app:destination="@id/crearIngreso" />
+    </fragment>
     <fragment
         android:id="@+id/listaMenbresia"
         android:name="com.example.therockmovilapi.listaMenbresia"
         android:label="fragment_lista_menbresia"
-        tools:layout="@layout/fragment_lista_menbresia" />
+        tools:layout="@layout/fragment_lista_menbresia" >
+        <action
+            android:id="@+id/action_listaMenbresia_to_crearMembresia"
+            app:destination="@id/crearMembresia" />
+    </fragment>
     <fragment
         android:id="@+id/listaMenbresiaUsuario"
         android:name="com.example.therockmovilapi.listaMenbresiaUsuario"
         android:label="fragment_lista_menbresia_usuario"
-        tools:layout="@layout/fragment_lista_menbresia_usuario" />
+        tools:layout="@layout/fragment_lista_menbresia_usuario" >
+        <action
+            android:id="@+id/action_listaMenbresiaUsuario_to_crearMenbresiausuario"
+            app:destination="@id/crearMenbresiausuario" />
+    </fragment>
     <fragment
         android:id="@+id/listaProducto"
         android:name="com.example.therockmovilapi.listaProducto"
         android:label="fragment_lista_producto"
-        tools:layout="@layout/fragment_lista_producto" />
+        tools:layout="@layout/fragment_lista_producto" >
+        <action
+            android:id="@+id/action_listaProducto_to_crearProducto"
+            app:destination="@id/crearProducto" />
+    </fragment>
     <fragment
         android:id="@+id/listaUsuario"
         android:name="com.example.therockmovilapi.listaUsuario"
         android:label="fragment_lista_usuario"
-        tools:layout="@layout/fragment_lista_usuario" />
+        tools:layout="@layout/fragment_lista_usuario" >
+        <action
+            android:id="@+id/action_listaUsuario_to_crearUsuario"
+            app:destination="@id/crearUsuario" />
+    </fragment>
     <fragment
         android:id="@+id/listaVenta"
         android:name="com.example.therockmovilapi.listaVenta"
         android:label="fragment_lista_venta"
-        tools:layout="@layout/fragment_lista_venta" />
+        tools:layout="@layout/fragment_lista_venta" >
+        <action
+            android:id="@+id/action_listaVenta_to_crearVenta"
+            app:destination="@id/crearVenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCategoria"
+        android:name="com.example.therockmovilapi.crearCategoria"
+        android:label="fragment_crear_categoria"
+        tools:layout="@layout/fragment_crear_categoria" >
+        <action
+            android:id="@+id/action_crearCategoria_to_listaCategoria"
+            app:destination="@id/listaCategoria" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearDetalleingreso"
+        android:name="com.example.therockmovilapi.crearDetalleingreso"
+        android:label="fragment_crear_detalleingreso"
+        tools:layout="@layout/fragment_crear_detalleingreso" >
+        <action
+            android:id="@+id/action_crearDetalleingreso_to_listaDetalleIngreso"
+            app:destination="@id/listaDetalleIngreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearIngreso"
+        android:name="com.example.therockmovilapi.crearIngreso"
+        android:label="fragment_crear_ingreso"
+        tools:layout="@layout/fragment_crear_ingreso" >
+        <action
+            android:id="@+id/action_crearIngreso_to_listaIngreso"
+            app:destination="@id/listaIngreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearMembresia"
+        android:name="com.example.therockmovilapi.crearMembresia"
+        android:label="fragment_crear_membresia"
+        tools:layout="@layout/fragment_crear_membresia" >
+        <action
+            android:id="@+id/action_crearMembresia_to_listaMenbresia"
+            app:destination="@id/listaMenbresia" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearMenbresiausuario"
+        android:name="com.example.therockmovilapi.crearMenbresiausuario"
+        android:label="fragment_crear_menbresiausuario"
+        tools:layout="@layout/fragment_crear_menbresiausuario" >
+        <action
+            android:id="@+id/action_crearMenbresiausuario_to_listaMenbresiaUsuario"
+            app:destination="@id/listaMenbresiaUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearProducto"
+        android:name="com.example.therockmovilapi.crearProducto"
+        android:label="fragment_crear_producto"
+        tools:layout="@layout/fragment_crear_producto" >
+        <action
+            android:id="@+id/action_crearProducto_to_listaProducto"
+            app:destination="@id/listaProducto" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearUsuario"
+        android:name="com.example.therockmovilapi.crearUsuario"
+        android:label="fragment_crear_usuario"
+        tools:layout="@layout/fragment_crear_usuario" >
+        <action
+            android:id="@+id/action_crearUsuario_to_listaUsuario"
+            app:destination="@id/listaUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearVenta"
+        android:name="com.example.therockmovilapi.crearVenta"
+        android:label="fragment_crear_venta"
+        tools:layout="@layout/fragment_crear_venta" >
+        <action
+            android:id="@+id/action_crearVenta_to_listaVenta"
+            app:destination="@id/listaVenta" />
+    </fragment>
 </navigation>

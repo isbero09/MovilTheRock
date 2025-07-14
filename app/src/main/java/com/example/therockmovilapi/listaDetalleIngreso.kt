@@ -20,7 +20,7 @@ class listaDetalleIngreso : Fragment() {
         val rv_lista_detalle_ingresos = view.findViewById<RecyclerView>(R.id.rv_lista_detalleingreso)
 
         view.findViewById<Button>(R.id.btn_nuevo_detalleingreso).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_to_listaDetalleIngreso)
+            findNavController().navigate(R.id.action_listaDetalleIngreso_to_crearDetalleingreso);
         }
 
         return view

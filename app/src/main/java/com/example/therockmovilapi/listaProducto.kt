@@ -20,7 +20,7 @@ class listaProducto : Fragment() {
         val rv_lista_productos = view.findViewById<RecyclerView>(R.id.rv_lista_producto)
 
         view.findViewById<Button>(R.id.btn_nuevo_producto).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_to_listaProducto)
+            findNavController().navigate(R.id.action_listaProducto_to_crearProducto);
         }
 
         return view

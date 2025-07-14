@@ -20,7 +20,7 @@ class listaUsuario : Fragment() {
         val rv_lista_usuarios = view.findViewById<RecyclerView>(R.id.rv_lista_usuario)
 
         view.findViewById<Button>(R.id.btn_nuevo_usuario).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_to_listaUsuario)
+            findNavController().navigate(R.id.action_listaUsuario_to_crearUsuario);
         }
         return view
     }

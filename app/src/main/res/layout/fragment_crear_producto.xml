@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crearProducto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="CREAR PRODUCTO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red" />
+
+    <!-- Nombre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_nombre_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Precio -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_precio_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Stock -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_stock_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Categoría ID -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID de Categoría"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_categoria_id_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Descripción -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_descripcion_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Estado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/producto_estado_nuevo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Ej: Activo / Inactivo"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_add_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Producto" />
+
+</LinearLayout>
