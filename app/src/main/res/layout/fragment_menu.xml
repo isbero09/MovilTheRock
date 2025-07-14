@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".menu">
+
+
+    <ImageView
+        android:id="@+id/logito"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/sinfondo"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THE ROCK GYM CENTER"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/red"/>
+    <Button
+        android:id="@+id/lista_usuarios_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USUARIOS" />
+
+    <Button
+        android:id="@+id/lista_membresias_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEMBRESIAS" />
+
+    <Button
+        android:id="@+id/lista_productos_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRODUCTOS"/>
+
+    <Button
+        android:id="@+id/lista_ventas_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VENTAS"/>
+
+    <Button
+        android:id="@+id/lista_ingresos_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INGRESOS"/>
+
+    <Button
+        android:id="@+id/lista_categoria_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CATEGORIAS"/>
+
+
+
+</LinearLayout>

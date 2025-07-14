@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".inicio">
+
+    <ImageView
+        android:id="@+id/logito"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sinfondo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="INICIO DE SESIÓN"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Ingrese su usuario" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Ingrese su contraseña"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/ir_a_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar" />
+
+</LinearLayout>
