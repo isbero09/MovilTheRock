@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:text="LISTA DE USUARIOs"
+        android:text="LISTA DE USUARIOS"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
