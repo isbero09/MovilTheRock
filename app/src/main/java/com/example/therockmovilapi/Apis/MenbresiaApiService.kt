@@ -12,30 +12,33 @@ import retrofit2.http.Path
 
 interface MenbresiaApiService {
     @GET("api/menbresia")
-    suspend fun getmenbresia(): List<Menbresia>
+    suspend fun getMenbresia(): List<Menbresia>
+
     @GET("api/menbresia/{id}")
-    suspend fun getmenbresia(@Path("id") id: Int): Menbresia
+    suspend fun getMenbresia(@Path("id") id: Int): Menbresia
+
     @POST("api/menbresia")
-    suspend fun postmenbresia(@Body menbresia: Menbresia): Menbresia
+    suspend fun postMenbresia(@Body menbresia: Menbresia): Menbresia
+
     @PUT("api/menbresia/{id}")
-    suspend fun putmenbresia(@Body menbresia: Menbresia, @Path("id")
-    id: Int): Menbresia
+    suspend fun putMenbresia(@Body menbresia: Menbresia, @Path("id") id: Int): Menbresia
+
     @DELETE("api/menbresia/{id}")
-    suspend fun deletemenbresia(@Path("id") id: Int): Menbresia
+    suspend fun deleteMenbresia(@Path("id") id: Int): Menbresia
 
     companion object {
         @Volatile
-        private var INSTANCE: IngresoApiService? = null
+        private var INSTANCE: MenbresiaApiService? = null
 
         private const val BASE_URL = "http://10.0.2.2:8000"
 
-        fun getApiManager(): IngresoApiService {
+        fun getApiManager(): MenbresiaApiService {
             return INSTANCE ?: synchronized(this) {
                 val instance = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
-                    .create(IngresoApiService::class.java)
+                    .create(MenbresiaApiService::class.java)
                 INSTANCE = instance
                 instance
             }

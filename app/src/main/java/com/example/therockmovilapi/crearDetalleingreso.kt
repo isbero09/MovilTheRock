@@ -5,55 +5,52 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import com.example.therockmovilapi.Apis.DetallesIngresosApiService
+import com.example.therockmovilapi.Entities.DetallesIngresos
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [crearDetalleingreso.newInstance] factory method to
- * create an instance of this fragment.
- */
 class crearDetalleingreso : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_crear_detalleingreso, container, false)
-    }
+        var view = inflater.inflate(R.layout.fragment_crear_detalleingreso, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment crearDetalleingreso.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            crearDetalleingreso().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        view.findViewById<Button>(R.id.btn_add_detalleingreso).setOnClickListener {
+            val ingreso = view.findViewById<EditText>(R.id.detalleingreso_ingreso_nuevo)
+                .text.toString().trim().toInt()
+
+            val productoId = view.findViewById<EditText>(R.id.detalleingreso_productoid_nuevo)
+                .text.toString().trim().toInt()
+
+            val cantidad = view.findViewById<EditText>(R.id.detalleingreso_cantidad_nuevo)
+                .text.toString().trim().toInt()
+
+            lifecycleScope.launch {
+                try {
+                    DetallesIngresosApiService.getApiManager().postDetallesIngresos(
+                        DetallesIngresos(ingreso, productoId, cantidad)
+                    )
+                    Toast.makeText(
+                        context, "Detalle Ingreso registrada exitosamente",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } catch (e: Exception) {
+                    Toast.makeText(
+                        context, "Error al registrar detallle ingreso : ${e.localizedMessage}",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
+
+
             }
+        }
+
+        return view
     }
 }
