@@ -18,5 +18,70 @@
         android:id="@+id/menu"
         android:name="com.example.therockmovilapi.menu"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_listaCategoria"
+            app:destination="@id/listaCategoria" />
+        <action
+            android:id="@+id/action_menu_to_listaDetalleIngreso"
+            app:destination="@id/listaDetalleIngreso" />
+        <action
+            android:id="@+id/action_menu_to_listaIngreso"
+            app:destination="@id/listaIngreso" />
+        <action
+            android:id="@+id/action_menu_to_listaMenbresia"
+            app:destination="@id/listaMenbresia" />
+        <action
+            android:id="@+id/action_menu_to_listaMenbresiaUsuario"
+            app:destination="@id/listaMenbresiaUsuario" />
+        <action
+            android:id="@+id/action_menu_to_listaProducto"
+            app:destination="@id/listaProducto" />
+        <action
+            android:id="@+id/action_menu_to_listaUsuario"
+            app:destination="@id/listaUsuario" />
+        <action
+            android:id="@+id/action_menu_to_listaVenta"
+            app:destination="@id/listaVenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaCategoria"
+        android:name="com.example.therockmovilapi.listaCategoria"
+        android:label="fragment_lista_categoria"
+        tools:layout="@layout/fragment_lista_categoria" />
+    <fragment
+        android:id="@+id/listaDetalleIngreso"
+        android:name="com.example.therockmovilapi.listaDetalleIngreso"
+        android:label="fragment_lista_detalle_ingreso"
+        tools:layout="@layout/fragment_lista_detalle_ingreso" />
+    <fragment
+        android:id="@+id/listaIngreso"
+        android:name="com.example.therockmovilapi.listaIngreso"
+        android:label="fragment_lista_ingreso"
+        tools:layout="@layout/fragment_lista_ingreso" />
+    <fragment
+        android:id="@+id/listaMenbresia"
+        android:name="com.example.therockmovilapi.listaMenbresia"
+        android:label="fragment_lista_menbresia"
+        tools:layout="@layout/fragment_lista_menbresia" />
+    <fragment
+        android:id="@+id/listaMenbresiaUsuario"
+        android:name="com.example.therockmovilapi.listaMenbresiaUsuario"
+        android:label="fragment_lista_menbresia_usuario"
+        tools:layout="@layout/fragment_lista_menbresia_usuario" />
+    <fragment
+        android:id="@+id/listaProducto"
+        android:name="com.example.therockmovilapi.listaProducto"
+        android:label="fragment_lista_producto"
+        tools:layout="@layout/fragment_lista_producto" />
+    <fragment
+        android:id="@+id/listaUsuario"
+        android:name="com.example.therockmovilapi.listaUsuario"
+        android:label="fragment_lista_usuario"
+        tools:layout="@layout/fragment_lista_usuario" />
+    <fragment
+        android:id="@+id/listaVenta"
+        android:name="com.example.therockmovilapi.listaVenta"
+        android:label="fragment_lista_venta"
+        tools:layout="@layout/fragment_lista_venta" />
 </navigation>

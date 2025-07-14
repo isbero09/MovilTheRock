@@ -16,11 +16,14 @@ interface DetallesIngresosApiService {
 
     @GET("api/detallesIngresos/{id}")
     suspend fun getDetallesIngresos(@Path("id") id: Int): DetallesIngresos
+
     @POST("api/detallesIngresos")
     suspend fun postDetallesIngresos(@Body detallesIngresos: DetallesIngresos): DetallesIngresos
+
     @PUT("api/detallesIngresos/{id}")
     suspend fun putDetallesIngresos(@Body detallesIngresos: DetallesIngresos, @Path("id") id:
     Int): DetallesIngresos
+
     @DELETE("api/detallesIngresos/{id}")
     suspend fun deleteDetallesIngresos(@Path("id") id: Int): DetallesIngresos
 
