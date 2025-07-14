@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_listaCategoria_to_crearCategoria"
             app:destination="@id/crearCategoria" />
+        <action
+            android:id="@+id/action_listaCategoria_to_verCategoria"
+            app:destination="@id/verCategoria" />
     </fragment>
     <fragment
         android:id="@+id/listaDetalleIngreso"
@@ -62,6 +65,9 @@
         <action
             android:id="@+id/action_listaDetalleIngreso_to_crearDetalleingreso"
             app:destination="@id/crearDetalleingreso" />
+        <action
+            android:id="@+id/action_listaDetalleIngreso_to_verDetalleIngreso"
+            app:destination="@id/verDetalleIngreso" />
     </fragment>
     <fragment
         android:id="@+id/listaIngreso"
@@ -71,6 +77,9 @@
         <action
             android:id="@+id/action_listaIngreso_to_crearIngreso"
             app:destination="@id/crearIngreso" />
+        <action
+            android:id="@+id/action_listaIngreso_to_verIngreso"
+            app:destination="@id/verIngreso" />
     </fragment>
     <fragment
         android:id="@+id/listaMenbresia"
@@ -80,6 +89,9 @@
         <action
             android:id="@+id/action_listaMenbresia_to_crearMembresia"
             app:destination="@id/crearMembresia" />
+        <action
+            android:id="@+id/action_listaMenbresia_to_verMembresia"
+            app:destination="@id/verMembresia" />
     </fragment>
     <fragment
         android:id="@+id/listaMenbresiaUsuario"
@@ -98,6 +110,9 @@
         <action
             android:id="@+id/action_listaProducto_to_crearProducto"
             app:destination="@id/crearProducto" />
+        <action
+            android:id="@+id/action_listaProducto_to_verProducto"
+            app:destination="@id/verProducto" />
     </fragment>
     <fragment
         android:id="@+id/listaUsuario"
@@ -107,6 +122,9 @@
         <action
             android:id="@+id/action_listaUsuario_to_crearUsuario"
             app:destination="@id/crearUsuario" />
+        <action
+            android:id="@+id/action_listaUsuario_to_verUsuario"
+            app:destination="@id/verUsuario" />
     </fragment>
     <fragment
         android:id="@+id/listaVenta"
@@ -116,6 +134,9 @@
         <action
             android:id="@+id/action_listaVenta_to_crearVenta"
             app:destination="@id/crearVenta" />
+        <action
+            android:id="@+id/action_listaVenta_to_verVenta"
+            app:destination="@id/verVenta" />
     </fragment>
     <fragment
         android:id="@+id/crearCategoria"
@@ -161,6 +182,9 @@
         <action
             android:id="@+id/action_crearMenbresiausuario_to_listaMenbresiaUsuario"
             app:destination="@id/listaMenbresiaUsuario" />
+        <action
+            android:id="@+id/action_crearMenbresiausuario_to_verMembresiausuario"
+            app:destination="@id/verMembresiausuario" />
     </fragment>
     <fragment
         android:id="@+id/crearProducto"
@@ -188,5 +212,173 @@
         <action
             android:id="@+id/action_crearVenta_to_listaVenta"
             app:destination="@id/listaVenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/verCategoria"
+        android:name="com.example.therockmovilapi.verCategoria"
+        android:label="fragment_ver_categoria"
+        tools:layout="@layout/fragment_ver_categoria" >
+        <action
+            android:id="@+id/action_verCategoria_to_listaCategoria"
+            app:destination="@id/listaCategoria" />
+        <action
+            android:id="@+id/action_verCategoria_to_editarCategoria"
+            app:destination="@id/editarCategoria" />
+    </fragment>
+    <fragment
+        android:id="@+id/verDetalleIngreso"
+        android:name="com.example.therockmovilapi.verDetalleIngreso"
+        android:label="fragment_ver_detalle_ingreso"
+        tools:layout="@layout/fragment_ver_detalle_ingreso" >
+        <action
+            android:id="@+id/action_verDetalleIngreso_to_listaDetalleIngreso"
+            app:destination="@id/listaDetalleIngreso" />
+        <action
+            android:id="@+id/action_verDetalleIngreso_to_editarDetalleingreso"
+            app:destination="@id/editarDetalleingreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/verIngreso"
+        android:name="com.example.therockmovilapi.verIngreso"
+        android:label="fragment_ver_ingreso"
+        tools:layout="@layout/fragment_ver_ingreso" >
+        <action
+            android:id="@+id/action_verIngreso_to_listaIngreso"
+            app:destination="@id/listaIngreso" />
+        <action
+            android:id="@+id/action_verIngreso_to_editarIngreso"
+            app:destination="@id/editarIngreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/verMembresia"
+        android:name="com.example.therockmovilapi.verMembresia"
+        android:label="fragment_ver_membresia"
+        tools:layout="@layout/fragment_ver_membresia" >
+        <action
+            android:id="@+id/action_verMembresia_to_listaMenbresia"
+            app:destination="@id/listaMenbresia" />
+        <action
+            android:id="@+id/action_verMembresia_to_editarMenbresia"
+            app:destination="@id/editarMenbresia" />
+    </fragment>
+    <fragment
+        android:id="@+id/verMembresiausuario"
+        android:name="com.example.therockmovilapi.verMembresiausuario"
+        android:label="fragment_ver_membresiausuario"
+        tools:layout="@layout/fragment_ver_membresiausuario" >
+        <action
+            android:id="@+id/action_verMembresiausuario_to_crearMenbresiausuario"
+            app:destination="@id/crearMenbresiausuario" />
+        <action
+            android:id="@+id/action_verMembresiausuario_to_editarMembresiausuario"
+            app:destination="@id/editarMembresiausuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/verProducto"
+        android:name="com.example.therockmovilapi.verProducto"
+        android:label="fragment_ver_producto"
+        tools:layout="@layout/fragment_ver_producto" >
+        <action
+            android:id="@+id/action_verProducto_to_listaProducto"
+            app:destination="@id/listaProducto" />
+        <action
+            android:id="@+id/action_verProducto_to_editarProducto"
+            app:destination="@id/editarProducto" />
+    </fragment>
+    <fragment
+        android:id="@+id/verUsuario"
+        android:name="com.example.therockmovilapi.verUsuario"
+        android:label="fragment_ver_usuario"
+        tools:layout="@layout/fragment_ver_usuario" >
+        <action
+            android:id="@+id/action_verUsuario_to_listaUsuario"
+            app:destination="@id/listaUsuario" />
+        <action
+            android:id="@+id/action_verUsuario_to_editarUsuario"
+            app:destination="@id/editarUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/verVenta"
+        android:name="com.example.therockmovilapi.verVenta"
+        android:label="fragment_ver_venta"
+        tools:layout="@layout/fragment_ver_venta" >
+        <action
+            android:id="@+id/action_verVenta_to_listaVenta"
+            app:destination="@id/listaVenta" />
+        <action
+            android:id="@+id/action_verVenta_to_editarVenta"
+            app:destination="@id/editarVenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarCategoria"
+        android:name="com.example.therockmovilapi.editarCategoria"
+        android:label="fragment_editar_categoria"
+        tools:layout="@layout/fragment_editar_categoria" >
+        <action
+            android:id="@+id/action_editarCategoria_to_verCategoria"
+            app:destination="@id/verCategoria" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarDetalleingreso"
+        android:name="com.example.therockmovilapi.editarDetalleingreso"
+        android:label="fragment_editar_detalleingreso"
+        tools:layout="@layout/fragment_editar_detalleingreso" >
+        <action
+            android:id="@+id/action_editarDetalleingreso_to_verDetalleIngreso"
+            app:destination="@id/verDetalleIngreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarIngreso"
+        android:name="com.example.therockmovilapi.editarIngreso"
+        android:label="fragment_editar_ingreso"
+        tools:layout="@layout/fragment_editar_ingreso" >
+        <action
+            android:id="@+id/action_editarIngreso_to_verIngreso"
+            app:destination="@id/verIngreso" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarMenbresia"
+        android:name="com.example.therockmovilapi.editarMenbresia"
+        android:label="fragment_editar_menbresia"
+        tools:layout="@layout/fragment_editar_menbresia" >
+        <action
+            android:id="@+id/action_editarMenbresia_to_verMembresia"
+            app:destination="@id/verMembresia" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarMembresiausuario"
+        android:name="com.example.therockmovilapi.editarMembresiausuario"
+        android:label="fragment_editar_membresiausuario"
+        tools:layout="@layout/fragment_editar_membresiausuario" >
+        <action
+            android:id="@+id/action_editarMembresiausuario_to_verMembresiausuario"
+            app:destination="@id/verMembresiausuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarProducto"
+        android:name="com.example.therockmovilapi.editarProducto"
+        android:label="fragment_editar_producto"
+        tools:layout="@layout/fragment_editar_producto" >
+        <action
+            android:id="@+id/action_editarProducto_to_verProducto"
+            app:destination="@id/verProducto" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarUsuario"
+        android:name="com.example.therockmovilapi.editarUsuario"
+        android:label="fragment_editar_usuario"
+        tools:layout="@layout/fragment_editar_usuario" >
+        <action
+            android:id="@+id/action_editarUsuario_to_verUsuario"
+            app:destination="@id/verUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarVenta"
+        android:name="com.example.therockmovilapi.editarVenta"
+        android:label="fragment_editar_venta"
+        tools:layout="@layout/fragment_editar_venta" >
+        <action
+            android:id="@+id/action_editarVenta_to_verVenta"
+            app:destination="@id/verVenta" />
     </fragment>
 </navigation>
