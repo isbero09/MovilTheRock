@@ -3,11 +3,28 @@ package com.example.therockmovilapi.Apis
 import com.example.therockmovilapi.Entities.Ingreso
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Path
 
 interface IngresoApiService {
     @GET("api/ingresos")
-    suspend fun getIngresos(): List<Ingreso>
+    suspend fun getIngreso(): List<Ingreso>
+
+    @GET("api/ingresos/{id}")
+    suspend fun getIngreso(@Path("id") id: Int): Ingreso
+
+    @POST("api/ingresos")
+    suspend fun postIngreso(@Body ingreso: Ingreso): Ingreso
+
+    @PUT("api/ingresos/{id}")
+    suspend fun putIngreso(@Body ingreso: Ingreso, @Path("id") id: Int): Ingreso
+
+    @DELETE("api/ingresos/{id}")
+    suspend fun deleteIngreso(@Path("id") id: Int): Ingreso
 
     companion object {
         @Volatile

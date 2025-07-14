@@ -1,6 +1,7 @@
 package com.example.therockmovilapi.Entities
 
 data class Usuario(
+    //val id: Int,
     val cedula: String,
     val nombres: String,
     val apellidos: String,

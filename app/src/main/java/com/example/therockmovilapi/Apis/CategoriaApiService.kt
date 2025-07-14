@@ -3,11 +3,29 @@ package com.example.therockmovilapi.Apis
 import com.example.therockmovilapi.Entities.Categoria
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Path
 
 interface CategoriaApiService {
     @GET("api/categorias")
-    suspend fun getCategorias(): List<Categoria>
+    suspend fun getCategoria(): List<Categoria>
+
+    @GET("api/categorias/{id}")
+    suspend fun getCategoria(@Path("id") id: Int): Categoria
+
+    @POST("api/categorias")
+    suspend fun postCategoria(@Body categoria: Categoria): Categoria
+
+    @PUT("api/categorias/{id}")
+    suspend fun putCategoria(@Body categoria: Categoria, @Path("id") id: Int): Categoria
+
+    @DELETE("api/categorias/{id}")
+    suspend fun deleteCategoria(@Path("id") id: Int): Categoria
+
 
     companion object {
         @Volatile
