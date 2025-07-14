@@ -24,6 +24,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="20dp"
         android:textColor="@color/red"/>
+
     <Button
         android:id="@+id/lista_usuarios_btn"
         android:layout_width="wrap_content"
@@ -35,6 +36,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MEMBRESIAS" />
+
+    <Button
+        android:id="@+id/lista_membresiasusuario_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEMBRESIAS-USUARIOS" />
 
     <Button
         android:id="@+id/lista_productos_btn"
@@ -53,6 +60,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INGRESOS"/>
+
+    <Button
+        android:id="@+id/lista_detalleingresos_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETALLE-INGRESOS"/>
 
     <Button
         android:id="@+id/lista_categoria_btn"

@@ -14,6 +14,7 @@
             android:id="@+id/action_login_to_menu"
             app:destination="@id/menu" />
     </fragment>
+
     <fragment
         android:id="@+id/menu"
         android:name="com.example.therockmovilapi.menu"
