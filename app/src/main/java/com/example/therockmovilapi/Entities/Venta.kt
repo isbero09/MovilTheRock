@@ -1,7 +1,7 @@
 package com.example.therockmovilapi.Entities
 
 data class Venta(
-    //val id: Int,
+    val id: Int,
     val cliente: String,
     val vendedor: String,
     val producto: String,

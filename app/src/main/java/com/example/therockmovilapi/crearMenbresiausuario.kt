@@ -49,7 +49,7 @@ class crearMenbresiausuario : Fragment() {
             lifecycleScope.launch {
                 try {
                     MenbresiasUsuarioApiService.getApiManager().postMenbresiasUsuario(
-                        MenbresiasUsuario(usuario, membresia, membresiaId, precio,
+                        MenbresiasUsuario(0, usuario, membresia, membresiaId, precio,
                             fechaPago, fechaInicio, fechaFin, estado)
                     )
                     Toast.makeText(

@@ -48,7 +48,7 @@ class crearVenta : Fragment() {
             lifecycleScope.launch {
                 try {
                     VentaApiService.getApiManager().postVenta(
-                        Venta( cliente, vendedor, producto, precio, fechaVenta, pagado, fechaPago )
+                        Venta(0, cliente, vendedor, producto, precio, fechaVenta, pagado, fechaPago )
                     )
                     Toast.makeText(
                         context, "Venta registrada exitosamente",

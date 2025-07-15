@@ -14,17 +14,17 @@ interface UsuarioApiService {
     @GET("api/usuarios")
     suspend fun getUsuario(): List<Usuario>
 
-    @GET("api/usuarios/{id}")
-    suspend fun getUsuario(@Path("id") id: Int): Usuario
+    @GET("api/usuarios/{cedula}")
+    suspend fun getUsuario(@Path("cedula") cedula: String): Usuario
 
     @POST("api/usuarios")
     suspend fun postUsuario(@Body usuario: Usuario): Usuario
 
-    @PUT("api/usuarios/{id}")
-    suspend fun putUsuario(@Body usuario: Usuario, @Path("id") id: Int): Usuario
+    @PUT("api/usuarios/{cedula}")
+    suspend fun putUsuario(@Body usuario: Usuario, @Path("cedula") cedula: String): Usuario
 
-    @DELETE("api/usuarios/{id}")
-    suspend fun deleteUsuario(@Path("id") id: Int): Usuario
+    @DELETE("api/usuarios/{cedula}")
+    suspend fun deleteUsuario(@Path("cedula") cedula: String): Usuario
 
     companion object {
         @Volatile

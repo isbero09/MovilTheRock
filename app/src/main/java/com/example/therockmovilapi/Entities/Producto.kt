@@ -1,7 +1,7 @@
 package com.example.therockmovilapi.Entities
 
 data class Producto(
-    //val id: Int,
+    val id: Int,
     val nombre: String,
     val precio: Double,      // Usar Double para decimal
     val stock: Int,

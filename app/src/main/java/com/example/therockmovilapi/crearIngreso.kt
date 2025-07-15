@@ -34,7 +34,7 @@ class crearIngreso : Fragment() {
             lifecycleScope.launch {
                 try{
                     IngresoApiService.getApiManager().postIngreso(
-                        Ingreso( cedula, fecha, detalle)
+                        Ingreso(0, cedula, fecha, detalle)
                     )
                     Toast.makeText(
                         context, "Ingreso registrado exitosamente",

@@ -34,7 +34,7 @@ class crearDetalleingreso : Fragment() {
             lifecycleScope.launch {
                 try {
                     DetallesIngresosApiService.getApiManager().postDetallesIngresos(
-                        DetallesIngresos(ingreso, productoId, cantidad)
+                        DetallesIngresos(0, ingreso, productoId, cantidad)
                     )
                     Toast.makeText(
                         context, "Detalle Ingreso registrada exitosamente",
