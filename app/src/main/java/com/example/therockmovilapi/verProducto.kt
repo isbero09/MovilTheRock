@@ -24,6 +24,16 @@ class verProducto : Fragment() {
             findNavController().navigate(R.id.action_verProducto_to_listaProducto)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_producto_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                ProductoApiService.getApiManager()
+                    .deleteProducto(arguments?.getInt("id") ?: 0)
+                findNavController()
+                    .navigate(R.id.action_verProducto_to_listaProducto)
+            }
+        }
+
+
         view.findViewById<Button>(R.id.btn_ver_producto_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {

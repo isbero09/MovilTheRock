@@ -24,6 +24,15 @@ class verVenta : Fragment() {
             findNavController().navigate(R.id.action_verVenta_to_listaVenta)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_venta_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                VentaApiService.getApiManager()
+                    .deleteVenta(arguments?.getInt("id") ?: 0)
+                findNavController()
+                    .navigate(R.id.action_verVenta_to_listaVenta)
+            }
+        }
+
         view.findViewById<Button>(R.id.btn_ver_venta_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {

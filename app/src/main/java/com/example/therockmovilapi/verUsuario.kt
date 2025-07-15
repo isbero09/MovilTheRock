@@ -25,6 +25,15 @@ class verUsuario : Fragment() {
             findNavController().navigate(R.id.action_verUsuario_to_listaUsuario)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_usuario_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                UsuarioApiService.getApiManager()
+                    .deleteUsuario(arguments?.getString("cedula") ?: "")
+                findNavController()
+                    .navigate(R.id.action_verUsuario_to_listaUsuario)
+            }
+        }
+
         view.findViewById<Button>(R.id.btn_ver_usuario_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {

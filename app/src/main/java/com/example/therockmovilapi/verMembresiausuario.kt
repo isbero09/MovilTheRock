@@ -24,6 +24,16 @@ class verMembresiausuario : Fragment() {
             findNavController().navigate(R.id.action_verMembresiausuario_to_listaMenbresiausuario)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_membresiausuario_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                MenbresiasUsuarioApiService.getApiManager()
+                    .deleteMenbresiasUsuario(arguments?.getInt("id") ?: 0)
+                findNavController()
+                    .navigate(R.id.action_verMembresiausuario_to_listaMenbresiausuario)
+            }
+        }
+
+
         view.findViewById<Button>(R.id.btn_ver_membresiausuario_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {

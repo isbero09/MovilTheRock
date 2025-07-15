@@ -29,7 +29,8 @@ class verDetalleIngreso : Fragment() {
                 DetallesIngresosApiService.getApiManager()
                     .deleteDetallesIngresos(arguments?.getInt("id") ?: 0)
 
-                findNavController().navigate(R.id.action_verDetalleIngreso_to_listaDetalleIngreso)
+                findNavController()
+                    .navigate(R.id.action_verDetalleIngreso_to_listaDetalleIngreso)
             }
         }
 

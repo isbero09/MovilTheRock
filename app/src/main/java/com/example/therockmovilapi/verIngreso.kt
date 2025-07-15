@@ -25,6 +25,16 @@ class verIngreso : Fragment() {
             findNavController().navigate(R.id.action_verIngreso_to_listaIngreso)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_ingreso_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                IngresoApiService.getApiManager()
+                    .deleteIngreso(arguments?.getInt("id") ?:0)
+
+                findNavController()
+                    .navigate(R.id.action_verIngreso_to_listaIngreso)
+            }
+        }
+
         view.findViewById<Button>(R.id.btn_ver_ingreso_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {
