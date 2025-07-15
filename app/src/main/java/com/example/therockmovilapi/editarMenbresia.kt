@@ -5,55 +5,92 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.therockmovilapi.Apis.MenbresiaApiService
+import com.example.therockmovilapi.Entities.Menbresia
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [editarMenbresia.newInstance] factory method to
- * create an instance of this fragment.
- */
 class editarMenbresia : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_editar_menbresia, container, false)
-    }
+        var view = inflater.inflate(R.layout.fragment_editar_menbresia, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment editarMenbresia.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            editarMenbresia().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        lifecycleScope.launch{
+            val membresia = MenbresiaApiService.getApiManager()
+                .getMenbresia(arguments?.getInt("id") ?: 0)
+
+            view.findViewById<TextView>(R.id.membresia_nombre_editado)
+                .text = membresia.nombre
+
+            view.findViewById<TextView>(R.id.membresia_precio_editado)
+                .text = membresia.precio.toString()
+
+            view.findViewById<TextView>(R.id.membresia_descripcion_editado)
+                .text = membresia.descripcion
+
+            view.findViewById<TextView>(R.id.membresia_fecha_creacion_editado)
+                .text = membresia.fecha_creacion
+
+            view.findViewById<TextView>(R.id.membresia_estado_editado)
+                .text = membresia.estado
+        }
+
+        view.findViewById<Button>(R.id.btn_update_membresia).setOnClickListener {
+            val nombre = view.findViewById<EditText>(R.id.membresia_nombre_editado)
+                .text.toString().trim()
+
+            val precio = view.findViewById<EditText>(R.id.membresia_precio_editado)
+                .text.toString().trim().toDouble()
+
+            val descripcion = view.findViewById<EditText>(R.id.membresia_descripcion_editado)
+                .text.toString().trim()
+
+            val fecha_creacion = view.findViewById<EditText>(R.id.membresia_fecha_creacion_editado)
+                .text.toString().trim()
+
+            val estado = view.findViewById<EditText>(R.id.membresia_estado_editado)
+                .text.toString().trim()
+
+            lifecycleScope.launch {
+                try {
+                    MenbresiaApiService.getApiManager()
+                        .putMenbresia(
+                            Menbresia(
+                                arguments?.getInt("id") ?: 0,
+                                nombre,
+                                precio,
+                                descripcion,
+                                fecha_creacion,
+                                estado
+                            ),
+                            arguments?.getInt("id") ?: 0
+                        )
+                    Toast.makeText(
+                        context, "Membresía actualizada exitosamente",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    findNavController().navigate(R.id.action_editarMenbresia_to_verMembresia, Bundle().apply {
+                        putInt("id", arguments?.getInt("id") ?: 0)
+                    })
+                } catch (e: Exception) {
+                    Toast.makeText(
+                        context, "Error al actualizar membresía: ${e.localizedMessage}",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
+        }
+
+
+        return view
     }
 }

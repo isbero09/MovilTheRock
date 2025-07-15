@@ -2,6 +2,7 @@ package com.example.therockmovilapi.Apis
 
 import com.example.therockmovilapi.Entities.Menbresia
 import com.example.therockmovilapi.Entities.MenbresiasUsuario
+import com.example.therockmovilapi.listaMenbresiaUsuario
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
@@ -22,7 +23,7 @@ interface MenbresiasUsuarioApiService {
     suspend fun postMenbresiasUsuario(@Body menbresiasUsuario: MenbresiasUsuario): MenbresiasUsuario
 
     @PUT("api/menbresiasUsuario/{id}")
-    suspend fun putMenbresiasUsuario(@Body menbresia: Menbresia, @Path("id") id: Int): MenbresiasUsuario
+    suspend fun putMenbresiasUsuario(@Body menbresiaUsuario: MenbresiasUsuario, @Path("id") id: Int): MenbresiasUsuario
 
     @DELETE("api/menbresiasUsuario/{id}")
     suspend fun deleteMenbresiasUsuario(@Path("id") id: Int): MenbresiasUsuario

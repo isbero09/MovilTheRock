@@ -5,55 +5,75 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.therockmovilapi.Apis.IngresoApiService
+import com.example.therockmovilapi.Entities.Ingreso
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [editarIngreso.newInstance] factory method to
- * create an instance of this fragment.
- */
 class editarIngreso : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_editar_ingreso, container, false)
-    }
+        var view = inflater.inflate(R.layout.fragment_editar_ingreso, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment editarIngreso.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            editarIngreso().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        lifecycleScope.launch{
+            val ingreso = IngresoApiService
+                .getApiManager()
+                .getIngreso(arguments?.getInt("id") ?: 0)
+
+            view.findViewById<TextView>(R.id.ingreso_cedula_editado)
+                .text = ingreso.cedula
+
+            view.findViewById<TextView>(R.id.ingreso_fecha_editado)
+                .text = ingreso.fecha
+
+            view.findViewById<TextView>(R.id.ingreso_detalles_editado)
+                .text = ingreso.detalles
+        }
+
+        view.findViewById<Button>(R.id.btn_update_ingreso).setOnClickListener {
+            val cedula = view.findViewById<EditText>(R.id.ingreso_cedula_editado)
+                .text.toString().trim()
+
+            val fecha = view.findViewById<EditText>(R.id.ingreso_fecha_editado)
+                .text.toString().trim()
+
+            val detalles = view.findViewById<EditText>(R.id.ingreso_detalles_editado)
+                .text.toString().trim()
+
+            lifecycleScope.launch {
+                try {
+                    IngresoApiService.getApiManager()
+                        .putIngreso(
+                            Ingreso(
+                                arguments?.getInt("id") ?: 0,
+                                cedula, fecha, detalles
+                            ), arguments?.getInt("id") ?: 0
+                        )
+                    Toast.makeText(
+                        context, "Ingreso actualizado exitosamente",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    findNavController().navigate(R.id.action_editarIngreso_to_verIngreso, Bundle().apply {
+                        putInt("id", arguments?.getInt("id") ?: 0)
+                    })
+                } catch (e: Exception) {
+                    Toast.makeText(
+                        context, "Error al actualizar ingreso: ${e.localizedMessage}",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
+        }
+        return view
     }
+
 }

@@ -20,7 +20,6 @@ class editarDetalleingreso : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_editar_detalleingreso, container, false)
 
         lifecycleScope.launch {
