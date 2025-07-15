@@ -24,6 +24,15 @@ class verDetalleIngreso : Fragment() {
             findNavController().navigate(R.id.action_verDetalleIngreso_to_listaDetalleIngreso)
         }
 
+        view.findViewById<Button>(R.id.btn_ver_detalleingreso_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                DetallesIngresosApiService.getApiManager()
+                    .deleteDetallesIngresos(arguments?.getInt("id") ?: 0)
+
+                findNavController().navigate(R.id.action_verDetalleIngreso_to_listaDetalleIngreso)
+            }
+        }
+
         view.findViewById<Button>(R.id.btn_ver_detalleingreso_editar).setOnClickListener {
             val id = arguments?.getInt("id")?: 0
             var bundle = Bundle().apply {

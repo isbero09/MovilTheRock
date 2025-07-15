@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.therockmovilapi.Apis.CategoriaApiService
+import com.example.therockmovilapi.Entities.Categoria
 import kotlinx.coroutines.launch
 
 class verCategoria : Fragment() {
@@ -22,6 +23,15 @@ class verCategoria : Fragment() {
 
         view.findViewById<Button>(R.id.btn_ver_categoria_atras).setOnClickListener {
             findNavController().navigate(R.id.action_verCategoria_to_listaCategoria)
+        }
+
+        view.findViewById<Button>(R.id.btn_ver_categoria_eliminar).setOnClickListener {
+            lifecycleScope.launch {
+                CategoriaApiService.getApiManager()
+                    .deleteCategoria(arguments?.getInt("id")?:0)
+
+                findNavController().navigate(R.id.action_verCategoria_to_listaCategoria)
+            }
         }
 
         view.findViewById<Button>(R.id.btn_ver_categoria_editar).setOnClickListener {
