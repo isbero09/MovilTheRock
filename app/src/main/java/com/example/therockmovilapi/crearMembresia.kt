@@ -39,7 +39,7 @@ class crearMembresia : Fragment() {
             lifecycleScope.launch {
                 try {
                     MenbresiaApiService.getApiManager().postMenbresia(
-                        Menbresia(nombre, precio, descripcion, fechaCreacion, estado)
+                        Menbresia(0, nombre, precio, descripcion, fechaCreacion, estado)
                     )
                     Toast.makeText(
                         context, "Membreisa registrada exitosamente",

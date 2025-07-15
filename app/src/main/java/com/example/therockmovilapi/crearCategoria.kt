@@ -35,7 +35,7 @@ class crearCategoria : Fragment() {
             lifecycleScope.launch {
                 try {
                     CategoriaApiService.getApiManager().postCategoria(
-                        Categoria( nombre,  descripcion, estado )
+                        Categoria(0, nombre, descripcion, estado )
                     )
                     Toast.makeText(
                         context, "Categoría registrada exitosamente",

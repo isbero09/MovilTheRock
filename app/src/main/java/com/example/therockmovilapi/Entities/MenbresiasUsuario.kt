@@ -3,6 +3,7 @@ package com.example.therockmovilapi.Entities
 import androidx.room.PrimaryKey
 
 data class MenbresiasUsuario(
+    val id: Int,
     val usuario: String,          // Puede ser cédula, ID o email según tu lógica
     val membresia: String,        // Puede ser nombre de la membresía
     val membresia_id: Int,

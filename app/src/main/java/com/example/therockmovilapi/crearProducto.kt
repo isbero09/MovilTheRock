@@ -43,7 +43,7 @@ class crearProducto : Fragment() {
             lifecycleScope.launch {
                 try {
                     ProductoApiService.getApiManager().postProducto(
-                        Producto(nombre, precio, stock, categoriaId, descripcion,
+                        Producto(0, nombre, precio, stock, categoriaId, descripcion,
                             estado)
                     )
                     Toast.makeText(
