@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editarMenbresia">
+    tools:context=".editarMenbresia"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="EDITAR MEMBRESÍA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red" />
 
-</FrameLayout>
+    <!-- Nombre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/membresia_nombre_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Precio -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/membresia_precio_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Descripción -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/membresia_descripcion_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Fecha de Creación -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Creación"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/membresia_fecha_creacion_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Estado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/membresia_estado_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Ej: Activo / Inactivo"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_update_membresia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Membresía" />
+
+</LinearLayout>

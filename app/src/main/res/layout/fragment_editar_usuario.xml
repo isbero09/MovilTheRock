@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editarUsuario">
+    tools:context=".editarUsuario"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDITAR USUARIO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginBottom="20dp"/>
 
-</FrameLayout>
+    <!-- Cédula -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cédula"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_cedula_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="number" />
+
+    <!-- Nombres -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombres"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_nombre_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Apellidos -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellidos"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_apellido_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Email -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_email_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="textEmailAddress" />
+
+    <!-- Teléfono -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teléfono"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_telefono_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="phone" />
+
+    <!-- Estado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_estado_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Ej: activo / inactivo" />
+
+    <!-- Fecha de Nacimiento -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Nacimiento"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/usuario_fecha_nacimiento_editado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="YYYY-MM-DD" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_update_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Usuario" />
+
+</LinearLayout>

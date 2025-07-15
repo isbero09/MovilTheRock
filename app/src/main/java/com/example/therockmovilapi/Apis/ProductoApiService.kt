@@ -11,7 +11,7 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface ProductoApiService {
-    @GET("api/producto")
+    @GET("api/productos")
     suspend fun getProducto(): List<Producto>
 
     @GET("api/productos/{id}")

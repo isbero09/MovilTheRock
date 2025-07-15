@@ -1,14 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editarVenta">
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-</FrameLayout>
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDITAR VENTA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Cliente -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente:"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_cliente_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Vendedor -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vendedor:"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_vendedor_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Producto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_producto_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Precio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_precio_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Fecha de Venta -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Venta"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_fechaventa_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:hint="YYYY-MM-DD"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ¿Está pagado? -->
+        <CheckBox
+            android:id="@+id/venta_pagado_editado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Pagado?"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Fecha de Pago -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Pago"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/venta_fecha_pago_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:hint="YYYY-MM-DD"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btn_update_venta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar Venta" />
+
+    </LinearLayout>
+</ScrollView>
