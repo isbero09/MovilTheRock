@@ -6,8 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.therockmovilapi.Apis.VentaApiService
+import kotlinx.coroutines.launch
 
 class listaVenta : Fragment() {
 
@@ -21,6 +26,23 @@ class listaVenta : Fragment() {
 
         view.findViewById<Button>(R.id.btn_nueva_venta).setOnClickListener {
             findNavController().navigate(R.id.action_listaVenta_to_crearVenta);
+        }
+
+        lifecycleScope.launch {
+            try {
+                val venta = VentaApiService
+                    .getApiManager()
+                    .getVentas()
+                rv_lista_ventas.layoutManager = LinearLayoutManager(requireContext())
+                rv_lista_ventas.adapter = lista_venta_adapter(venta)
+            }catch (e: Exception) {
+                var message="Error: ${e.localizedMessage}"
+                AlertDialog.Builder(view.context)
+                    .setTitle("Venta")
+                    .setMessage(message)
+                    .setPositiveButton("OK", null)
+                    .show()
+            }
         }
 
         return view

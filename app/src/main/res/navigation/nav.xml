@@ -109,6 +109,10 @@
         <action
             android:id="@+id/action_listaMenbresiaUsuario_to_crearMenbresiausuario"
             app:destination="@id/crearMenbresiausuario" />
+        <action
+            android:id="@+id/action_listaMenbresiaUsuario_to_verMembresiausuario"
+            app:destination="@id/verMembresiausuario" />
+
     </fragment>
 
     <fragment
