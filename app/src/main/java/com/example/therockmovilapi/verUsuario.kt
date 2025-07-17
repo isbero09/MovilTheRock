@@ -35,9 +35,9 @@ class verUsuario : Fragment() {
         }
 
         view.findViewById<Button>(R.id.btn_ver_usuario_editar).setOnClickListener {
-            val id = arguments?.getInt("id")?: 0
+            val cedula = arguments?.getString("cedula")?: ""
             var bundle = Bundle().apply {
-                putInt("id", id)
+                putString("cedula", cedula)
             }
 
             findNavController().navigate(R.id.action_verUsuario_to_editarUsuario, bundle)
