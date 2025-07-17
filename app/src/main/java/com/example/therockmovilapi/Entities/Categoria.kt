@@ -4,5 +4,5 @@ data class Categoria (
     val id: Int,
     val nombre: String,
     val descripcion: String,
-    val estado: String // si Laravel te manda "Activo" / "Inactivo"
+    val estado: String
 )

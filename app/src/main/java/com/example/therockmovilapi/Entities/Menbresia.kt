@@ -1,7 +1,5 @@
 package com.example.therockmovilapi.Entities
 
-import androidx.room.PrimaryKey
-
 data class Menbresia(
     val id: Int,
     val nombre: String,
