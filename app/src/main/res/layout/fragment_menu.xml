@@ -49,11 +49,11 @@
         android:layout_height="wrap_content"
         android:text="PRODUCTOS"/>
 
-    <Button
-        android:id="@+id/lista_ventas_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VENTAS"/>
+    <!--Título <Button
+       android:id="@+id/lista_ventas_btn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="VENTAS"/> -->
 
     <Button
         android:id="@+id/lista_ingresos_btn"
@@ -61,17 +61,17 @@
         android:layout_height="wrap_content"
         android:text="INGRESOS"/>
 
-    <Button
+    <!--<Button
         android:id="@+id/lista_detalleingresos_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DETALLE-INGRESOS"/>
+        android:text="DETALLE-INGRESOS"/>-->
 
-    <Button
+    <!--<Button
         android:id="@+id/lista_categoria_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CATEGORIAS"/>
+        android:text="CATEGORIAS"/>-->
 
 
 

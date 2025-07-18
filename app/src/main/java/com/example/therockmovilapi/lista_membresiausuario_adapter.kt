@@ -34,7 +34,7 @@ class lista_membresiausuario_Adapter(private var lista: List<MenbresiasUsuario>)
             }
 
             holder.itemView.findNavController()
-                .navigate(R.id.action_verMembresiausuario_to_listaMenbresiausuario, bundle)
+                .navigate(R.id.action_listaMenbresiaUsuario_to_verMembresiausuario, bundle)
 
         }
 

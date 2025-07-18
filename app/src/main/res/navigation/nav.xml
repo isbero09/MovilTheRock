@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_listaCategoria_to_verCategoria"
             app:destination="@id/verCategoria" />
+        <action
+            android:id="@+id/action_listaCategoria_to_menu"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -73,6 +76,12 @@
         <action
             android:id="@+id/action_listaDetalleIngreso_to_verDetalleIngreso"
             app:destination="@id/verDetalleIngreso" />
+        <action
+            android:id="@+id/action_listaDetalleIngreso_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_listaDetalleIngreso_to_menu2"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -86,6 +95,12 @@
         <action
             android:id="@+id/action_listaIngreso_to_verIngreso"
             app:destination="@id/verIngreso" />
+        <action
+            android:id="@+id/action_listaIngreso_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_listaIngreso_to_menu2"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -99,6 +114,9 @@
         <action
             android:id="@+id/action_listaMenbresia_to_verMembresia"
             app:destination="@id/verMembresia" />
+        <action
+            android:id="@+id/action_listaMenbresia_to_menu"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -112,6 +130,9 @@
         <action
             android:id="@+id/action_listaMenbresiaUsuario_to_verMembresiausuario"
             app:destination="@id/verMembresiausuario" />
+        <action
+            android:id="@+id/action_listaMenbresiaUsuario_to_menu"
+            app:destination="@id/menu" />
 
     </fragment>
 
@@ -126,6 +147,9 @@
         <action
             android:id="@+id/action_listaProducto_to_verProducto"
             app:destination="@id/verProducto" />
+        <action
+            android:id="@+id/action_listaProducto_to_menu"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -139,6 +163,9 @@
         <action
             android:id="@+id/action_listaUsuario_to_verUsuario"
             app:destination="@id/verUsuario" />
+        <action
+            android:id="@+id/action_listaUsuario_to_menu"
+            app:destination="@id/menu" />
     </fragment>
 
     <fragment
@@ -152,6 +179,9 @@
         <action
             android:id="@+id/action_listaVenta_to_verVenta"
             app:destination="@id/verVenta" />
+        <action
+            android:id="@+id/action_listaVenta_to_menu"
+            app:destination="@id/menu" />
     </fragment>
 
     <!-- CREAR -->

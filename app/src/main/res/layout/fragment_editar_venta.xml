@@ -84,11 +84,16 @@
             android:layout_marginBottom="20dp" />
 
         <!-- ¿Está pagado? -->
-        <CheckBox
-            android:id="@+id/venta_pagado_editado"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Pagado?"
+            android:text="¿Está pagado?"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/venta_pagado_editado"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp" />
 
         <!-- Fecha de Pago -->

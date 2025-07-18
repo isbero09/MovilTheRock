@@ -39,10 +39,12 @@ class crearVenta : Fragment() {
             val fechaVenta = view.findViewById<EditText>(R.id.venta_fecha_venta_nuevo)
                 .text.toString().trim()
 
-            val pagado = view.findViewById<CheckBox>(R.id.venta_pagado_nuevo).isChecked
+            val pagado = view.findViewById<EditText>(R.id.venta_pagado_nuevo)
+                .text.toString().trim()
 
             val fechaPagoText = view.findViewById<EditText>(R.id.venta_fecha_pago_nuevo)
                 .text.toString().trim()
+
             val fechaPago: String? = if (fechaPagoText.isNotEmpty()) fechaPagoText else null
 
             lifecycleScope.launch {

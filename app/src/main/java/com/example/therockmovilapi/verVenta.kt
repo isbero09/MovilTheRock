@@ -66,7 +66,7 @@ class verVenta : Fragment() {
                 .text = "Fecha de Venta: " + venta.fecha_venta
 
             view.findViewById<TextView>(R.id.tv_ver_venta_pagado)
-                .text = "Pagado: " + if (venta.pagado) "Sí" else "No"
+                .text = "¿Está pagado?: " + venta.pagado
 
             view.findViewById<TextView>(R.id.tv_ver_venta_fecha_pago)
                 .text = "Fecha de Pago: " + (venta.fecha_pago ?: "No registrado")

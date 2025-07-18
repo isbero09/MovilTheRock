@@ -80,7 +80,7 @@
             android:id="@+id/tv_ver_venta_pagado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pagado: --"
+            android:text="¿Está pagado?: --"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:paddingVertical="8dp" />
 

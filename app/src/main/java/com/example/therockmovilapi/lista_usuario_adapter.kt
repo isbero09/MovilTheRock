@@ -13,7 +13,7 @@ import com.example.therockmovilapi.Entities.Usuario
 class lista_usuario_adapter(private var lista: List<Usuario>):
     RecyclerView.Adapter<UsuarioViewHolder>(){
 
-    override fun onCreateViewHolder( parent: ViewGroup, viewType: Int): UsuarioViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
         val view= LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_usuario ,parent,false)

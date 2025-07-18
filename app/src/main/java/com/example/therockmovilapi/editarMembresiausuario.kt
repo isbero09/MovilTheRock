@@ -92,7 +92,7 @@ class editarMembresiausuario : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    findNavController().navigate(R.id.action_verMembresiausuario_to_editarMembresiausuario, Bundle().apply {
+                    findNavController().navigate(R.id.action_editarMembresiausuario_to_verMembresiausuario, Bundle().apply {
                         putInt("id", arguments?.getInt("id") ?: 0)
                     })
                 } catch (e: Exception) {
